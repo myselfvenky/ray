@@ -13,7 +13,7 @@ app.post("/ping", (
     req, res
 ) => {
     var nm_inst = nodemailer.createTransport({
-        service: 'gmail',
+        service: 'box.varcsoft.com',
         auth: {
             user: 'venkateshdonthula@varcsoft.com',
             pass: 'venky@0308'
