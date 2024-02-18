@@ -8,7 +8,6 @@ app.get("/", (req, res) => {
     res.send("Welcome to the VARCBYTES CICD Pipeline")
 })
 
-
 app.post("/ping", (
     req, res
 ) => {
