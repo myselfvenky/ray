@@ -8,14 +8,14 @@ app.get("/", (req, res) => {
     res.send("Welcome to the VARCBYTES CICD Pipeline")
 })
 
-app.get("/ping", (
+app.post("/ping", (
     req, res
 ) => {
     var nm_inst = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: 'venkateshdonthula@varcsoft.com',
-            pass: 'Venky@0308'
+            pass: 'venky@0308'
         }
     });
     var mailOptions = {
