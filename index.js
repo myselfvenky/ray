@@ -7,6 +7,7 @@ app.use(cors())
 app.get("/", (req, res) => {
     res.send("Welcome to the VARCBYTES CICD Pipeline")
 })
+
 app.get("/ping", (
     req, res
 ) => {
