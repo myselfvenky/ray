@@ -11,6 +11,7 @@ app.get("/", (req, res) => {
 app.post("/ping", (
     req, res
 ) => {
+
     var nm_inst = nodemailer.createTransport({
         host: 'box.varcsoft.com',
         port: 465,
