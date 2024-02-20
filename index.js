@@ -75,11 +75,17 @@ app.post("/ping", (
     ))
 
 })
-app.listen(5000, () => {
+// eslint-disable-next-line no-undef
+app.listen(process.env.NODE_ENV === "development" ?
     // eslint-disable-next-line no-undef
-    process.env.NODE_ENV === "development" ?
+    process.env.DEV_PORT :
+    // eslint-disable-next-line no-undef
+    process.env.PROD_PORT
+    , () => {
         // eslint-disable-next-line no-undef
-        console.log(`Server is running on ${process.env.DEV_URL}:{process.env.DEV_PORT}`) :
-        // eslint-disable-next-line no-undef
-        console.log(`Server is running on ${process.env.PROD_URL}:${process.env.PROD_PORT}`)
-})
+        process.env.NODE_ENV === "development" ?
+            // eslint-disable-next-line no-undef
+            console.log(`Server is running on ${process.env.DEV_URL}:{process.env.DEV_PORT}`) :
+            // eslint-disable-next-line no-undef
+            console.log(`Server is running on ${process.env.PROD_URL}:${process.env.PROD_PORT}`)
+    })
