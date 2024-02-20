@@ -64,6 +64,7 @@ app.post("/createPort", async (req, res) => {
 app.post("/ping", (
     req, res
 ) => {
+
     console.log(res)
     res.send(sendEmail(
         "venkateshdonthula@varcsoft.com",
@@ -72,7 +73,6 @@ app.post("/ping", (
         "CICD - VARCBYTES",
         JSON.stringify(req.body),
     ))
-
 })
 // eslint-disable-next-line no-undef
 app.listen(process.env.NODE_ENV === "development" ?
