@@ -11,6 +11,7 @@ initprisma()
 app.get("/", (req, res) => {
     res.send("Welcome to the VARCBYTES CICD Pipeline")
 })
+//practice
 app.get("/getPorts", async (req, res) => {
     try {
         const result = await prisma.ports.findMany()
