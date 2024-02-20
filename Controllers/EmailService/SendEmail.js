@@ -21,7 +21,7 @@ export const sendEmail = async (from, to, subject, text, html) => {
     var mailOptions = {
         from: from,
         to: to,
-        subject: 'CICD - VARCBYTES',
+        subject: subject,
         ...finalBody
     };
     nm_inst.sendMail(mailOptions, function (error, info) {

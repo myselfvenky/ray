@@ -70,8 +70,7 @@ app.post("/ping", (
         // eslint-disable-next-line no-undef
         process.env.TO_EMAIL,
         "CICD - VARCBYTES",
-        "That was easy!",
-        "That was easy!"
+        JSON.stringify(req.body),
     ))
 
 })
